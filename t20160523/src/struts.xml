@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="aaa" extends="struts-default" namespace="/front">
+		<action name="login" class="LoginAction">
+			<result name="success">/loginSuccess.jsp</result>
+			<result name="fail">/loginFail.jsp</result>
+		</action>
+	</package>
+	<package name="bbb" extends="struts-default" namespace="/back">
+		<action name="login" class="CopyOfLoginAction">
+			<result name="success">/loginSuccess.jsp</result>
+			<result name="fail">/loginFail.jsp</result>
+			<result name="myjsp">/MyJsp.jsp</result>
+		</action>
+	</package>
+	<package name="info" extends="struts-default" namespace="/infoEdit">
+		<action name="infoAction" class="info.InfoAciton">
+			<result name="success">/infoEdit/ListShow.jsp</result>
+			<result name="fail">/infoEdit/error.jsp</result>
+			<result name="infoShow">/infoEdit/infoShowBySTAG.jsp</result>
+		</action>
+	</package>
+</struts>    
